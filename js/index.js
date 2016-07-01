@@ -50,7 +50,7 @@ function search(){
 
   $.ajax(
     { url: wikiURL,
-      dataType: "json"
+      dataType: "jsonp"
     })
     .done( function(data){
       displayResults(data);
