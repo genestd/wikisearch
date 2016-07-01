@@ -49,8 +49,8 @@ function search(){
   console.log( wikiURL );
 
   $.ajax(
-    { url: wikiURL
-      dataType: json
+    { url: wikiURL,
+      dataType: "json"
     })
     .done( function(data){
       displayResults(data);
