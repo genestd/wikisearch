@@ -72,8 +72,12 @@ function displayResults(response){
   myHTML[0] = "<div class='module resHdr'><h2>" +
             titleCase(response[0]) +
             "</h2></div>";
-  console.log(myHTML);
-  for (var i=0;i<response[1].length;i++){
+  if (response[1].length == 0 ){
+    myHTML.push( "<div class='module resPage'>No results found for search</div>");
+  } else {
+    document.getElementById("searchtext").value = "";
+    for (var i=0;i<response[1].length;i++){
+
     content = "<div class='module resPage'>" +
     "<a href='" + response[3][i] + "' target='_blank'><b>" +
               response[1][i] +
@@ -82,9 +86,7 @@ function displayResults(response){
     content += "</div>";
      myHTML.push(content);
       }
-
-
-  console.log(myHTML);
+  }
   $("#results").html(myHTML);
 }
 
