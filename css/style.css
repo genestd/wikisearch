@@ -4,7 +4,9 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
+body{
+  height: 100%;
+}
 .grid {
   background: white;
   margin: 0 0 20px 0;
@@ -145,6 +147,7 @@ input:focus{
 }
 #message{
   margin-left: 20px;
+  padding-top: 5px;
   text-align: left;
 }
 .resHdr{
