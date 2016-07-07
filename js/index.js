@@ -32,6 +32,7 @@ function cleanRequest(  ){
   console.log(searchString);
   if (searchString.length == 0){
     $("#message").html("Invalid search (must be alpha-numeric)");
+    clearResults();
   } else if (searchString !== searchRequest){
     $("#message").html("Special characters not allowed...searching: " + searchString);
     clearResults();
