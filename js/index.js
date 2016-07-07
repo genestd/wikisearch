@@ -87,12 +87,14 @@ function displayResults(response){
      myHTML.push(content);
       }
   }
+  $("#results").css({"background-color":"#ffffff"});
   $("#results").html(myHTML);
 }
 
 function clearResults(){
   $(".resHdr").remove();
   $(".resPage").remove();
+  $("#results").css({"background-color":"transparent"});
 }
 
 function titleCase(str) {
